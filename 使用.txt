@@ -1,0 +1,18 @@
+视频目录结构:
+you mp4 dir:
+	- you mp4 data
+    		- you mp4
+    		- you gif or jpg、png
+
+config配置:-手动修改创建
+path:视频文件目录地址
+resources:资源目录名
+SinglePersonmoodstart:单用户模式
+QuickLoading:快速启动
+time:更新时间,超过5天时启动更新
+
+history.json文件:存储标签的文件-自动创建
+
+QuickLoadingConfig.json文件存储快速加载的文件-自动创建
+
+SinglePersondata.json:存储单人数据的文件-自动创建
