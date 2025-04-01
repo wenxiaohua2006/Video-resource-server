@@ -1,0 +1,61 @@
+.input-container {
+    position:sticky;
+    top: 0;
+    z-index: 10;
+    width: 90%;
+    margin-bottom: 40px;
+}
+.search-container {
+    width: 100%;
+    position: relative;
+    margin-left: -20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* 默认隐藏 */
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-height: 768px) {
+    .input-container{
+        margin-bottom: 0px;
+    }
+}

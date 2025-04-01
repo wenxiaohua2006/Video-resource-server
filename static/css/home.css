@@ -1,0 +1,53 @@
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+ 
+.video-item {
+    position: relative;
+    flex: 1 1 calc(20% - 20px); /* Adjust based on desired number of columns */
+    max-width: 400px;
+    min-width: 300px;
+    /* height: 350px; */
+    background-color: #ddd; /* Placeholder for when video doesn't load */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+ 
+/* Optional: Center the video within its container if there's extra space due to aspect ratio */
+/* .video-item::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+} */
+  /* 16:9 aspect ratio (9/16 * 100 = 56.25) */
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Use object-fit to maintain aspect ratio and fill the container */
+    object-fit: cover;
+}

@@ -1,0 +1,77 @@
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 300px;
+    background-color: #000;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    width: 100%;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden; /* 使用 visibility 隐藏 */
+    opacity: 0; /* 配合 visibility 实现平滑过渡 */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper:hover .video-overlay,
+.video-wrapper:focus-within .video-overlay {
+    visibility: visible; /* 鼠标移入时显示 */
+    opacity: 1;
+}
+
+.video-title {
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.video-controls {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.play-pause-btn, .fullscreen-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.current-time, .duration {
+    color: #fff;
+    font-size: 14px;
+}
+.video-ongoing {
+    display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;
+}
